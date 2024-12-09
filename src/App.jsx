@@ -68,18 +68,18 @@ function App() {
                 <Actor name={name}></Actor>
             ))}
 
-            {/* <Todo task="learn React" isDone={true}></Todo>
+            <Todo task="learn React" isDone={true}></Todo>
             <Todo task="Explore Core Concepts" isDone={false}></Todo>
-            <Todo task="Try JSX" isDone={true}></Todo> */}
-            {/* 
+            <Todo task="Try JSX" isDone={true}></Todo>
+            
       <Device name="Laptop" price="45"></Device>
       <Device name="Mobile"></Device>
       <Person></Person>
       <Student grade="7" score="98"></Student>
       <Student></Student>
       <Student></Student>
-      <Developer></Developer> */}
-            {/* <Students></Students> */}
+      <Developer></Developer>
+            <Students></Students>
 
             <img src={reactLogo} alt="React logo" />
             <img src={viteLogo} alt="Vite logo" />
