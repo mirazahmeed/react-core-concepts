@@ -42,8 +42,21 @@
 //     )
 // }
 // conditon rendering option 5
-export default function Todo({task, isDone}){
-    return(
-        <h2>{task}{isDone || ': Do it'}</h2>
-    )
+// export default function Todo({task, isDone}){
+//     return(
+//         <h2>{task}{isDone || ': Do it'}</h2>
+//     )
+// }
+
+// conditional rendering option 6
+export default function Todo({ task, isDone }) {
+    let listItem;
+    if (isDone) {
+        listItem = (
+            <h2 style={{ textDecoration: "line-through" }}>Task: {task}</h2>
+        );
+    } else {
+        listItem = <h2>Task: {task}</h2>;
+    }
+    return listItem;
 }

@@ -3,14 +3,74 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 import Todo from "./Todo";
+import Actor from "./Actor";
+import Singer from "./singer";
+import BookStore from "./BookStore";
 
 function App() {
+    const books = [
+        {
+            id: 1,
+            title: "The Great Gatsby",
+            author: "F. Scott Fitzgerald",
+            description: "The Great Show In Broadly ",
+            price: 340,
+            available: true,
+        },
+        {
+            id: 2,
+            title: "To Kill a Mockingbird",
+            author: "Harper Lee",
+            description: "To Kill a Mockingbird",
+            price: 340,
+            available: false,
+        },
+        {
+            id: 3,
+            title: "1984",
+            author: "George Orwell",
+            description: "1984",
+            price: 340,
+            available: true,
+        },
+        {
+            id: 4,
+            title: "Brave New World",
+            author: "Aldous Huxley",
+            description: "1984",
+            price: 980,
+            available: true,
+        },
+    ];
+
+    const actors = ["Salman", "John", "Wick", "Taylor", "Tom"];
+
+    const singers = [
+        { name: "Sumi", age: 26 },
+        { name: "Elita", age: 35 },
+        { name: "Konal", age: 38 },
+        { name: "Taylor", age: 42 },
+    ];
+
     return (
         <>
             <h1>Vite + React</h1>
-            <Todo task="learn React" isDone={true}></Todo>
+
+            <BookStore books={books}></BookStore>
+
+            {singers.map((name) => (
+                <Singer singer={name}></Singer>
+            ))}
+
+            <Actor name="Shah Rukh Khan" age={45}></Actor>
+
+            {actors.map((name) => (
+                <Actor name={name}></Actor>
+            ))}
+
+            {/* <Todo task="learn React" isDone={true}></Todo>
             <Todo task="Explore Core Concepts" isDone={false}></Todo>
-            <Todo task="Try JSX" isDone={true}></Todo>
+            <Todo task="Try JSX" isDone={true}></Todo> */}
             {/* 
       <Device name="Laptop" price="45"></Device>
       <Device name="Mobile"></Device>
